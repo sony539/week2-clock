@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Clock and Countdown Timer</title>
+  <meta name="description" content="A live digital clock and a countdown timer built with HTML, CSS and JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Clock and Countdown</h1>
+    <p>Built with HTML, CSS and JavaScript</p>
+  </header>
+
+  <main>
+
+    <!-- DIGITAL CLOCK -->
+    <section class="card" aria-labelledby="clock-title">
+      <h2 id="clock-title">Digital Clock</h2>
+      <p id="clock-date" class="date-line"></p>
+      <p id="clock" class="clock" role="timer" aria-live="off">00:00:00</p>
+      <button id="format-btn" class="btn" type="button">Switch to 12-hour</button>
+    </section>
+
+    <!-- COUNTDOWN TIMER -->
+    <section class="card" aria-labelledby="count-title">
+      <h2 id="count-title">Countdown Timer</h2>
+      <p id="count-label" class="date-line">Time left until New Year</p>
+
+      <div class="countdown" id="countdown" role="timer" aria-live="off">
+        <div class="unit"><span id="cd-days">0</span><small>Days</small></div>
+        <div class="unit"><span id="cd-hours">00</span><small>Hours</small></div>
+        <div class="unit"><span id="cd-minutes">00</span><small>Minutes</small></div>
+        <div class="unit"><span id="cd-seconds">00</span><small>Seconds</small></div>
+      </div>
+
+      <p id="count-done" class="done" hidden>The time has arrived!</p>
+
+      <div class="picker">
+        <label for="target-date">Pick your own date</label>
+        <input type="datetime-local" id="target-date">
+        <button id="reset-btn" class="btn btn-ghost" type="button">Back to New Year</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sony Geddam. Week 2 assignment, Skill Nexis Web Development Internship.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
